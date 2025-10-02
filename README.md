@@ -14,9 +14,6 @@
 
 </div>
 ---
-## 📌 Citation
-
-If you find our work useful for your research, please consider citing:
 
 ```bibtex
 @misc{liu2025stylosmultiview3dstylization,
