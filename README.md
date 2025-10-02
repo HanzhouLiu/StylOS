@@ -1,6 +1,3 @@
-# StylOS
-Official Implementation of *Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting*
-
 ## 📄 Paper
 [![arXiv](https://img.shields.io/badge/arXiv-2509.26455-b31b1b.svg)](https://arxiv.org/abs/2509.26455)
 
