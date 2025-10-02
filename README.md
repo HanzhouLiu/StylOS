@@ -1,6 +1,7 @@
 <div align="center">
 
-## Stylos: VGGT + Gaussian Splatting for 3D Style Transfer
+## Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting
+
 
 [![arXiv](https://img.shields.io/badge/arXiv-2509.26455-b31b1b.svg)](https://arxiv.org/abs/2509.26455)  
 
