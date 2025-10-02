@@ -1,4 +1,4 @@
-## 📄 Paper
+## Stylos: VGGT + Gaussian Splatting for 3D Style Transfer
 [![arXiv](https://img.shields.io/badge/arXiv-2509.26455-b31b1b.svg)](https://arxiv.org/abs/2509.26455)
 
 **Stylos: VGGT + Gaussian Splatting for 3D Style Transfer**  
