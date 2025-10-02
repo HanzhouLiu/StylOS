@@ -13,7 +13,6 @@
 <sub>\* Equal Contribution † Corresponding Author</sub>
 
 </div>
----
 
 ```bibtex
 @misc{liu2025stylosmultiview3dstylization,
