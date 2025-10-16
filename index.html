@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://editverse.s3-website-us-east-1.amazonaws.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='.9em' font-size='90'>🎨</text></svg>">
+     <title>Stylos Project Page</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com/">
+     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+     <link href="./stylos_files/css2" rel="stylesheet">
+     <style>
+         :root {
+             --background-color: #0a0a0a;
+             --text-color: #cccccc;
+             --heading-color: #ffffff;
+             --accent-color: #2563eb; /* Kept for potential future use, but not used for buttons now */
+             --container-width: 1100px;
+         }
+
+         body {
+             background-color: var(--background-color);
+             color: var(--text-color);
+             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+             line-height: 1.7;
+             margin: 0;
+             padding: 0;
+             font-size: 16px;
+         }
+
+         .container {
+             max-width: var(--container-width);
+             margin: 0 auto;
+             padding: 20px;
+         }
+
+         header {
+             text-align: center;
+             padding: 30px 0 30px;
+         }
+
+         /* Rule for the header's h2 */
+         header h2 {
+             margin-bottom: 20px;
+             line-height: 1.2; /* MODIFIED: Reduced line spacing for the title */
+         }
+
+         h1 {
+             font-size: 3.5rem;
+             font-weight: 700;
+             color: var(--heading-color);
+             margin-bottom: 0.5em;
+             letter-spacing: -1.5px;
+         }
+
+         .authors {
+             display: flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             gap: 0.5em;
+             font-size: 1.1rem;
+             margin: 15px 0;
+             color: #b0b0b0;
+             padding: 0 20px;
+         }
+         
+         .authors a {
+             color: var(--heading-color);
+             text-decoration: none;
+         }
+         
+         .authors a:hover {
+             text-decoration: underline;
+         }
+
+         .affiliations {
+             display: flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             gap: 1.5em;
+             font-size: 1rem;
+             color: #888;
+             margin-top: -10px;
+         }
+
+         .links {
+             margin-top: 10px;
+             margin-bottom: -60px;
+             display: flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             gap: 15px;
+         }
+
+         .links a {
+             background-color: #1a1a1a;
+             color: var(--heading-color);
+             text-decoration: none;
+             border: 1px solid #333;
+             padding: 12px 24px;
+             border-radius: 999px;
+             font-weight: 600;
+             transition: all 0.2s ease-in-out;
+             /* Added for icon alignment */
+             display: inline-flex;
+             align-items: center;
+         }
+
+         .links a:hover {
+             background-color: #555555;
+             border-color: #555555;
+             color: var(--heading-color);
+             transform: translateY(-2px);
+             box-shadow: 0 4px 20px rgba(180, 180, 180, 0.2);
+         }
+         
+         /* --- CSS RULE FOR CUSTOM ICONS --- */
+         .links a img {
+             height: 1.6em; /* MODIFIED: Increased icon size */
+             margin-right: 8px; /* 图标和文字之间的距离 */
+         }
+
+         section {
+             padding: 50px 0;
+         }
+         
+         h2 {
+             font-size: 2.5rem;
+             font-weight: 700;
+             text-align: center;
+             color: var(--heading-color);
+             margin-top: 30px;
+             margin-bottom: 30px;
+         }
+
+         h3 {
+             font-size: 1.5rem;
+             font-weight: 500;
+             text-align: center;
+             color: var(--heading-color);
+             margin-top: 20px;
+             margin-bottom: 20px;
+         }
+
+         h4 {
+             text-align: center;
+             color: var(--heading-color);
+             margin-top: 5px;
+             margin-bottom: 5px;
+         }
+
+         p, li {
+             font-size: 1.1rem;
+             max-width: 800px;
+             margin-left: auto;
+             margin-right: auto;
+             margin-bottom: 1em;
+             text-align: justify;
+         }
+
+         /* --- MODIFICATION START: Widen Methodology text --- */
+         #method p {
+             max-width: 1100px;
+         }
+         /* --- MODIFICATION END --- */
+
+         .teaser-video {
+             width: 90%;
+             max-width: 900px;
+             margin: 0 auto 20px auto;
+             display: block;
+             border-radius: 12px;
+             box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+         }
+         
+         .caption {
+             display: block;
+             text-align: center;
+             font-size: 1rem;
+             color: #888;
+             margin-top: 15px;
+         }
+
+         .gallery {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+             gap: 25px;
+         }
+
+         .gallery-item {
+             position: relative; /* This is required for positioning the tags */
+         }
+
+         .gallery-item video, .gallery-item img {
+             width: 100%;
+             border-radius: 8px;
+             display: block;
+         }
+         
+         /* --- START: Added styles for corner tags --- */
+         .gallery-item::before,
+         .gallery-item::after {
+             position: absolute;
+             background-color: rgba(30, 30, 30, 0.7); /* Semi-transparent gray */
+             backdrop-filter: blur(4px); /* Frosted glass effect */
+             color: #f0f0f0;
+             padding: 4px 10px;
+             border-radius: 6px;
+             font-size: 13px;
+             font-weight: 500;
+             z-index: 1;
+             pointer-events: none; /* So tags don't interfere with video controls */
+             opacity: 0; /* Hidden by default, for a fade-in effect */
+             transition: opacity 0.3s;
+         }
+
+         .gallery-item[data-tag-top]::before {
+             content: attr(data-tag-top); /* Get text from data attribute */
+             top: 10px;
+             left: 10px; /* Positioned to the top-left */
+             opacity: 1; /* Make visible if attribute exists */
+         }
+         
+         .gallery-item[data-tag-bottom]::after {
+             content: attr(data-tag-bottom); /* Get text from data attribute */
+             bottom: 10px;
+             right: 10px; /* Positioned to the bottom-right */
+             opacity: 1; /* Make visible if attribute exists */
+         }
+         /* --- END: Added styles for corner tags --- */
+
+         .gallery-item .prompt {
+             background-color: #181818;
+             padding: 12px;
+             border-radius: 6px;
+             margin-top: 12px;
+             font-size: 0.95rem;
+             border: 1px solid #2a2a2a;
+         }
+
+         .comparison-grid {
+             display: grid;
+             /* --- MODIFIED: Changed from '1fr 1fr' to '1fr 1fr 1fr' for a three-column layout --- */
+             grid-template-columns: 1fr 1fr 1fr;
+             gap: 20px;
+             align-items: start;
+         }
+
+         .comparison-grid h3 {
+             text-align: center;
+             color: #aaa;
+             font-weight: 400;
+             margin-bottom: 10px;
+         }
+
+         pre {
+             background-color: #161616;
+             color: #e0e0e0;
+             padding: 25px;
+             border-radius: 8px;
+             border: 1px solid #2a2a2a;
+             white-space: pre-wrap;
+             word-wrap: break-word;
+             font-family: 'SF Mono', 'Courier New', Courier, monospace;
+             max-width: 800px;
+             margin-left: auto;
+             margin-right: auto;
+         }
+
+         b, strong {
+             color: var(--heading-color);
+             font-weight: 600;
+         }
+         
+         /* --- START: Styles for Interactive Comparison Section --- */
+         #main-comparison-viewer {
+             max-width: 250px;
+             margin: 0 auto;
+         }
+
+         .comparison-slider {
+             position: relative;
+             overflow: hidden;
+             border-radius: 12px;
+             box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+             line-height: 0;
+         }
+
+         .comparison-slider .video-container {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             overflow: hidden;
+         }
+
+         .comparison-slider .video-before {
+             position: relative;
+             z-index: 1;
+         }
+
+         .comparison-slider .video-after {
+             z-index: 2;
+             /* --- MODIFICATION 1 START --- */
+             width: 100%; /* Ensure the container is full width */
+             clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); /* Clip to show the left 50% initially */
+             /* --- MODIFICATION 1 END --- */
+         }
+
+         .comparison-slider video {
+             width: 300px;
+             height: 300px;
+             object-fit: cover;
+             display: block;
+         }
+         
+         #main-comparison-viewer .prompt {
+             background-color: #181818;
+             padding: 12px;
+             border-radius: 6px;
+             margin: 12px auto 0 auto;
+             font-size: 0.95rem;
+             border: 1px solid #2a2a2a;
+             max-width: 100%;
+             text-align: center;
+             display: none;
+         }
+
+         .slider-handle {
+             position: absolute;
+             top: 0;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 4px;
+             height: 100%;
+             background-color: rgba(255, 255, 255, 0.8);
+             cursor: ew-resize;
+             z-index: 3;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+         .slider-grabber {
+             width: 40px;
+             height: 40px;
+             background-color: rgba(255, 255, 255, 0.8);
+             border-radius: 50%;
+             border: 2px solid #0a0a0a;
+             position: relative;
+         }
+         
+         .slider-grabber::before,
+         .slider-grabber::after {
+             content: '';
+             position: absolute;
+             top: 50%;
+             width: 0;
+             height: 0;
+             border-style: solid;
+             transform: translateY(-50%);
+         }
+         .slider-grabber::before {
+             border-width: 6px 8px 6px 0;
+             border-color: transparent #0a0a0a transparent transparent;
+             left: 8px;
+         }
+         .slider-grabber::after {
+             border-width: 6px 0 6px 8px;
+             border-color: transparent transparent transparent #0a0a0a;
+             right: 8px;
+         }
+         
+         .slider-tag {
+             position: absolute;
+             top: 10px;
+             background-color: rgba(30, 30, 30, 0.7);
+             backdrop-filter: blur(4px);
+             color: #f0f0f0;
+             padding: 4px 10px;
+             border-radius: 6px;
+             font-size: 13px;
+             font-weight: 500;
+             z-index: 4;
+             pointer-events: none;
+             line-height: normal;
+         }
+
+         .video-before .slider-tag { right: 10px; }
+         .video-after .slider-tag { left: 10px; }
+
+         #thumbnail-gallery {
+             display: flex;
+             justify-content: center;
+             flex-wrap: wrap;
+             gap: 15px;
+             margin-top: 40px;
+         }
+
+         .thumbnail-item {
+             width: 80px;
+             border: 3px solid #333;
+             border-radius: 8px;
+             cursor: pointer;
+             overflow: hidden;
+             transition: all 0.2s ease-in-out;
+             opacity: 0.6;
+         }
+
+         .thumbnail-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 让图片填满并保持比例 */
+            display: block;
+        }
+
+         .thumbnail-item:hover {
+             border-color: #777;
+             transform: translateY(-3px);
+             opacity: 1;
+         }
+
+         .thumbnail-item.active {
+             border-color: var(--heading-color);
+             box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+             opacity: 1;
+             transform: translateY(-3px);
+         }
+
+         .thumbnail-item video {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             display: block;
+         }
+         /* --- END: Styles for Interactive Comparison Section --- */
+
+        /* --- START: Styles for Quantitative Comparison Table --- */
+        .table-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            overflow-x: auto; /* For responsiveness on small screens */
+        }
+        table.comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: var(--text-color);
+            font-size: 1rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            border-top: 1px solid #2a2a2a;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .comparison-table thead {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #444;
+        }
+        .comparison-table th {
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+        .comparison-table tbody tr:nth-child(even) {
+            background-color: #101010;
+        }
+        .comparison-table tr.section-header td {
+            background-color: #202020;
+            font-weight: 600;
+            text-align: center;
+            color: var(--heading-color);
+            padding: 10px;
+            border-top: 2px solid #444;
+            border-bottom: 1px solid #333;
+        }
+        .comparison-table .grayed-out {
+            color: #888;
+        }
+        .comparison-table .grayed-out strong {
+            color: #999;
+        }
+        .table-caption {
+            max-width: 900px;
+            margin: 20px auto 0 auto;
+            text-align: justify;
+            font-size: 1rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        /* --- END: Styles for Quantitative Comparison Table --- */
+
+        /* --- MODIFICATION START: Styles for Side-by-Side CTA and User Study --- */
+        .dual-cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto;
+            align-items: stretch;
+        }
+
+        #comparison-cta {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #comparison-cta, #user-study-container {
+            background: #1c1c1c;
+            border: 1px solid #333;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        #comparison-cta:hover, #user-study-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(90, 160, 255, 0.25);
+            border-color: #4a90e2;
+        }
+
+        #comparison-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 25px 30px;
+            color: var(--heading-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease-in-out;
+            text-align: center;
+        }
+        #comparison-cta:hover a {
+            color: #fff;
+        }
+
+        #user-study-container {
+            padding: 20px 25px;
+            box-sizing: border-box;
+        }
+        #user-study-container h3 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+        }
+        
+        .user-study-chart-area {
+            display: flex;
+            align-items: stretch;
+            gap: 15px;
+        }
+
+        .y-axis-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .chart-bars-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .chart-bar {
+            flex-grow: 1;
+            display: flex;
+            height: 24px;
+            border-radius: 4px;
+            overflow: hidden;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .bar-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111;
+        }
+        .bar-segment.win  { background-color: #FFD7BA; } /* Green for Win */
+        .bar-segment.tie  { background-color: #eeeeee; } /* Orange for Tie */
+        .bar-segment.fail { background-color: #bababa; } /* Gray for Fail */
+
+        .method-label {
+            color: #ccc;
+            white-space: nowrap;
+            width: 110px; /* Allocate fixed space for labels */
+        }
+        
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 0.85rem;
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-color { width: 12px; height: 12px; border-radius: 3px; }
+
+        @media (max-width: 900px) {
+            .dual-cta-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            #comparison-cta a { min-height: 100px; }
+        }
+        /* --- MODIFICATION END --- */
+        .comparison-group video {
+  width: 100%;
+  border-radius: 10px;
+}
+  /* 统一把左侧标成 Before，右侧标成 Stylization */
+  .video-before .slider-tag {
+    left: 10px !important;
+    right: auto !important;
+  }
+  .video-after .slider-tag {
+    right: 10px !important;
+    left: auto !important;
+  }
+     </style>
+ </head>
+ <body data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed="">
+
+ <div class="container">
+
+     <header>
+         <h2>Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting</h2>
+         <div class="authors">
+             <span><a href="https://github.com/HanzhouLiu">Hanzhou Liu</a>,</span>
+             <span><a href="">Jia Huang</a>,</span>
+             <span><a href="https://engineering.tamu.edu/electrical/profiles/mlu.html">Mi Lu</a>,</span>
+             <span><a href="https://engineering.tamu.edu/mechanical/profiles/saripalli.html">Srikanth Saripalli</a>,</span>
+             <span><a href="https://scholar.google.com/citations?user=jW34BjIAAAAJ&hl=en">Peng Jiang</a></span>
+         </div>
+         <div class="affiliations">
+             <span>Texas A&M University</span>
+         </div>
+         <div class="links">
+             <a href="https://arxiv.org/abs/2509.26455"><img src="./stylos_files/arxiv-logomark-small@2x.png" alt="Paper Icon">Paper</a>
+             <a href="https://github.com/HanzhouLiu/StylOS"><img src="./stylos_files/github-mark-white.png" alt="Code Icon">Code (coming soon)</a>
+         </div>
+     </header>
+
+     <main>
+         <section class="teaser">
+             <video class="teaser-video" autoplay loop playsinline controls preload="auto">
+                 <source src="./videos/Stylos_demo2_2min.mp4" type="video/mp4">
+             </video>
+             <span class="caption">
+                 <b>Stylos</b> a single-forward 3D Gaussian framework for 3D style transfer that operates on unposed content, from a single image to a multi-view collection, conditioned on a separate reference style image.
+             </span>
+         </section>
+
+         <section id="gallery">
+             <h2>3D Stylization</h2>
+             <p style="text-align: center;">Demos for llff dataset</p>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/llff/concat/fern.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/llff/concat/flower.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/cartoon/cartoon3.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/llff/concat/fortress.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/llff/concat/horns.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/cartoon/cartoon6.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/llff/concat/room.mp4" type="video/mp4"></video>
+                </div>
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/llff/concat/trex.mp4" type="video/mp4"></video>
+                </div>
+                <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/cartoon/cartoon6.mp4" type="video/mp4"></video>
+                </div> -->
+            </div>
+            <br>
+             <p style="text-align: center;">Demos for tnt dataset</p>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/tnt/concat/Barn.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/tnt/concat/Caterpillar.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/tnt/concat/Family.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/tnt/concat/Family.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/tnt/concat/Garden.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/tnt/concat/truck.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/tnt/concat/train.mp4" type="video/mp4"></video>
+                </div>
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/tnt/concat/truck.mp4" type="video/mp4"></video>
+                </div>
+                <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/tnt/concat/truck.mp4" type="video/mp4"></video>
+                </div> -->
+            </div>
+            <br>
+             <p style="text-align: center;">Demos for dl3dv dataset </p>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/dl/concat/9cc6ad4a9e4e6b1e7e4118af53d99c98dbe58893075e81412aee4041121f9a16.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/dl/concat/a3149af06a70ab8e2d2ab6f73fb5ea734c006fb78354ff74ec30f1deabf72663.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/paint/paint3.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/dl/concat/a9f2704d5bdc14e08cbd950b2a490057c65cfb9d006f994dbaf12d15aa0f3439.mp4" type="video/mp4"></video>
+                 </div>
+                 <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/dl/concat/b4a026c71b44d034ffe15d1a5a80a42a3d1e826d718bee801a2a84dd33c6fc40.mp4" type="video/mp4"></video>
+                 </div>
+                 <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                     <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/paint/paint6.mp4" type="video/mp4"></video>
+                 </div> -->
+             </div>
+             <br>
+             <div class="gallery">
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+1"><source src="./videos/dl/concat/c8d2952e259c976f3bafa4a2fd12e32a47c7f69acd64539d46a68a1dfa4335c3.mp4" type="video/mp4"></video>
+                </div>
+                <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+2"><source src="./videos/dl/concat/c9b7a1c31b2131dcf766c777024e99cd6b244c29302555e3a096ed7486fc948d.mp4" type="video/mp4"></video>
+                </div>
+                <!-- <div class="gallery-item" data-tag-top="Reconstruction" data-tag-bottom="Stylization">
+                    <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Video+3"><source src="./videos/paint/paint6.mp4" type="video/mp4"></video>
+                </div> -->
+            </div>
+            <br>
+
+<h3>More demos</h3>
+<p style="text-align: center;"><span style="font-size:1.2em;">⚠️</span> If reconstruction and stylization videos are unsynchronized, click the style images again. <span style="font-size:1.2em;">⚠️</span></p>
+
+<div class="comparison-group-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;">
+
+  <!-- ===== 第1组 ===== -->
+  <div class="comparison-group" style="flex:1 1 300px; max-width:300px;">
+    <div class="comparison-slider">
+      <div class="video-container video-before">
+        <video autoplay muted loop playsinline src="./videos/comp/content/fern.mp4"></video>
+        <div class="slider-tag">Reconstruction</div>
+      </div>
+      <div class="video-container video-after">
+        <video autoplay muted loop playsinline src="./videos/comp/style/fern1.mp4"></video>
+        <div class="slider-tag">Stylization</div>
+      </div>
+      <div class="slider-handle"><div class="slider-grabber"></div></div>
+    </div>
+    <div class="thumbnail-row" style="display:flex;justify-content:center;gap:10px;margin-top:10px;">
+      <div class="thumb" data-before="./videos/comp/content/fern.mp4" data-after="./videos/comp/style/fern1.mp4">
+        <img src="./videos/comp/imgs/fern1.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+      <div class="thumb" data-before="./videos/comp/content/fern.mp4" data-after="./videos/comp/style/fern2.mp4">
+        <img src="./videos/comp/imgs/fern2.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 第2组 ===== -->
+  <div class="comparison-group" style="flex:1 1 300px; max-width:300px;">
+    <div class="comparison-slider">
+      <div class="video-container video-before">
+        <video autoplay muted loop playsinline src="./videos/comp/content/temple.mp4"></video>
+        <div class="slider-tag">Reconstruction</div>
+      </div>
+      <div class="video-container video-after">
+        <video autoplay muted loop playsinline src="./videos/comp/style/temple1.mp4"></video>
+        <div class="slider-tag">Stylization</div>
+      </div>
+      <div class="slider-handle"><div class="slider-grabber"></div></div>
+    </div>
+    <div class="thumbnail-row" style="display:flex;justify-content:center;gap:10px;margin-top:10px;">
+      <div class="thumb" data-before="./videos/comp/content/temple.mp4" data-after="./videos/comp/style/temple1.mp4">
+        <img src="./videos/comp/imgs/temple1.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+      <div class="thumb" data-before="./videos/comp/content/temple.mp4" data-after="./videos/comp/style/temple2.mp4">
+        <img src="./videos/comp/imgs/temple2.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 第3组 ===== -->
+  <div class="comparison-group" style="flex:1 1 300px; max-width:300px;">
+    <div class="comparison-slider">
+      <div class="video-container video-before">
+        <video autoplay muted loop playsinline src="./videos/comp/content/trex.mp4"></video>
+        <div class="slider-tag">Reconstruction</div>
+      </div>
+      <div class="video-container video-after">
+        <video autoplay muted loop playsinline src="./videos/comp/style/trex1.mp4"></video>
+        <div class="slider-tag">Stylization</div>
+      </div>
+      <div class="slider-handle"><div class="slider-grabber"></div></div>
+    </div>
+    <div class="thumbnail-row" style="display:flex;justify-content:center;gap:10px;margin-top:10px;">
+      <div class="thumb" data-before="./videos/comp/content/trex.mp4" data-after="./videos/comp/style/trex1.mp4">
+        <img src="./videos/comp/imgs/trex1.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+      <div class="thumb" data-before="./videos/comp/content/trex.mp4" data-after="./videos/comp/style/trex2.mp4">
+        <img src="./videos/comp/imgs/trex2.png" style="width:80px;border-radius:6px;cursor:pointer;">
+      </div>
+    </div>
+  </div>
+</div>
+
+         
+
+         <!-- </section>
+
+        
+
+         <section id="gallery">
+         <h2>Stylized Video Generation</h2>
+         <div class="gallery">
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen1.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "Songbirds splashing and flapping in a birdbath."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style1.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen2.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A child riding a bicycle down a suburban street with training wheels."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style2.jpeg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen3.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A waterfall splashing into a rocky pool surrounded by mossy cliffs."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style3.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+         </div>
+
+         <div class="gallery">
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen4.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A golden retriever running through a grassy field on a windy day."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style4.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen5.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "Meadow flowers nodding gently in the wind."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style5.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen666.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "Smoke slowly rising from a chimney in a silent mountain village."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style6.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+         </div>
+
+         <div class="gallery">
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen7.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A woman is vacuuming the living room floor."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style7.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen8.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A lone rider gallops across an open, sandy plain under a clear blue sky."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style8.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+             <div class="gallery-item">
+                 <video autoplay="" muted="" loop="" playsinline="" poster="https://via.placeholder.com/500x300.png/000000?text=Generated+Video+1">
+                     <source src="./videos/gen/style/gen9.mp4" type="video/mp4">
+                 </video>
+                 <div class="prompt">
+                    <b>Prompt:</b> "A group of kids drawing on the sidewalk with colorful chalk."
+                    <div style="display:flex;align-items:center;margin-top:6px;">
+                        <b style="margin-right:8px;">Style:</b>
+                        <img src="./videos/gen/imgs/style9.jpg" style="width:80px;border-radius:6px;">
+                    </div>
+                    </div>
+             </div>
+         </div>
+         </section> -->
+
+
+
+         <section id="method">
+             <h2>Methodology</h2>
+              <p>
+                 Stylos introduces a single-forward 3D Gaussian framework for geometry-aware, view-consistent 3D stylization. 
+             </p>
+             <p>
+                 <strong>(1) Camera pose-free 3D stylization:</strong> Unlike previous 3D stylization methods that require per-scene optimization or known camera poses, Stylos performs instant stylization from unposed content images and a single style reference.
+             </p>
+             <p>
+                 <strong>(2) 3D style loss:</strong> To enforce cross-view coherence and geometry-aware stylization, we introduce a voxel-based 3D style loss that aligns aggregated scene features with style statistics. 
+             </p>
+             <p>
+                 <strong>(3) Scalabibilty and generalization: </strong> The proposed pipeline enables scaling from a single to hundreds of views with a single style image, and achieving zero-shot generalization to unseen categories, scenes, and styles.
+             </p>
+             <div style="text-align:center; margin: 40px 0;">
+                <img src="./arch.jpg" alt="Diagram showing text, image, and video tokens being combined" style="max-width:100%; border-radius: 8px;">
+                <span class="caption"> The framework builds upon a pretrained VGGT model, which serves as the backbone. Given a style reference image and one or more content views (also referred to as context views),
+                  Stylos predicts a set of stylized 3D Gaussian primitives together with camera parameters,
+                  enabling faithful reconstruction of the observed scene while transferring the desired style. A key component is the 3D style loss, matching voxelized 3D features with 2D style statistics. </span>
+           </div>
+         </section>
+
+
+  
+        <section id="citation">
+             <h2>Citation</h2>
+             <p>If you find our work useful for your research, please consider citing our paper:</p>
+             <pre>@article{liu2025stylos,
+title={Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting},
+author={Liu, Hanzhou and Huang, Jia and Lu, Mi and Saripalli, Srikanth and Jiang, Peng},
+journal={arXiv preprint arXiv:2509.26455},
+year={2025}
+}
+             </pre>
+         </section>
+
+         <h4>This template is modified based on <a href="https://xujiacong.github.io/FreeViS/">FreeViS.</a></h4>
+
+     </main>
+ </div>
+
+ <script>
+ document.addEventListener('DOMContentLoaded', () => {
+     // --- Part 1: Interactive Gallery Logic ---
+     const mainBeforeVideo = document.getElementById('main-before-video');
+     const mainAfterVideo = document.getElementById('main-after-video');
+     const mainPrompt = document.getElementById('main-prompt');
+     const thumbnails = document.querySelectorAll('.thumbnail-item');
+
+     // Function to update the main viewer
+     function updateViewer(thumbnail) {
+         // Get data from the clicked thumbnail's attributes
+         const beforeSrc = thumbnail.dataset.beforeSrc;
+         const afterSrc = thumbnail.dataset.afterSrc;
+         const promptText = thumbnail.dataset.prompt;
+
+         // Update the video sources
+         mainBeforeVideo.src = beforeSrc;
+         mainAfterVideo.src = afterSrc;
+
+         // Load the new video sources
+         mainBeforeVideo.load();
+         mainAfterVideo.load();
+
+         // Update the prompt text
+         mainPrompt.innerHTML = promptText;
+
+         // Manage the 'active' class for styling
+         thumbnails.forEach(item => item.classList.remove('active'));
+         thumbnail.classList.add('active');
+     }
+
+     // Add click event listeners to all thumbnails
+     thumbnails.forEach(thumbnail => {
+         thumbnail.addEventListener('click', () => {
+             updateViewer(thumbnail);
+         });
+     });
+
+     // Initialize the viewer with the first thumbnail's content on page load
+     if (thumbnails.length > 0) {
+         updateViewer(thumbnails[0]);
+     }
+
+
+     // --- Part 2: Slider Dragging Logic (for the main viewer) ---
+     const slider = document.querySelector('.comparison-slider');
+     if (slider) {
+         const handle = slider.querySelector('.slider-handle');
+         const videoAfter = slider.querySelector('.video-after');
+         let isDragging = false;
+
+         const startDrag = (e) => {
+             isDragging = true;
+             e.preventDefault();
+         };
+
+         const onDrag = (e) => {
+             if (!isDragging) return;
+             const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+             if (clientX === undefined) return;
+
+             const rect = slider.getBoundingClientRect();
+             let offsetX = clientX - rect.left;
+
+             if (offsetX < 0) offsetX = 0;
+             if (offsetX > rect.width) offsetX = rect.width;
+             
+             const percentage = (offsetX / rect.width) * 100;
+             handle.style.left = `${percentage}%`;
+             
+             // --- MODIFICATION 2 START ---
+             // Instead of changing width, change the clip-path polygon
+             videoAfter.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+             // --- MODIFICATION 2 END ---
+         };
+
+         const stopDrag = () => {
+             isDragging = false;
+         };
+         
+         handle.addEventListener('mousedown', startDrag);
+         document.addEventListener('mousemove', onDrag);
+         document.addEventListener('mouseup', stopDrag);
+         
+         handle.addEventListener('touchstart', startDrag, { passive: false });
+         document.addEventListener('touchmove', onDrag);
+         document.addEventListener('touchend', stopDrag);
+     }
+ });
+ document.querySelectorAll('.comparison-group').forEach(group => {
+  const slider = group.querySelector('.comparison-slider');
+  const handle = group.querySelector('.slider-handle');
+  const afterContainer = group.querySelector('.video-after');
+  const thumbs = group.querySelectorAll('.thumb');
+
+  // 初始化 clip-path（右半显示 After）
+  afterContainer.style.clipPath = 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)';
+  handle.style.left = '50%';
+
+  // 缩略图点击切换视频
+  thumbs.forEach(t => {
+    t.addEventListener('click', () => {
+      const before = t.dataset.before;
+      const after = t.dataset.after;
+      group.querySelector('.video-before video').src = before;
+      group.querySelector('.video-after video').src = after;
+    });
+  });
+
+  // 拖动滑块
+  let dragging = false;
+  const move = e => {
+    if (!dragging) return;
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - slider.getBoundingClientRect().left;
+    const w = slider.offsetWidth;
+    const pct = Math.max(0, Math.min(1, x / w));
+    handle.style.left = (pct * 100) + '%';
+    afterContainer.style.clipPath = `polygon(${pct * 100}% 0, 100% 0, 100% 100%, ${pct * 100}% 100%)`;
+  };
+  handle.addEventListener('mousedown', () => dragging = true);
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('mousemove', move);
+  handle.addEventListener('touchstart', e => { dragging = true; e.preventDefault(); });
+  window.addEventListener('touchend', () => dragging = false);
+  window.addEventListener('touchmove', move);
+});
+ </script>
+ 
+ </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
