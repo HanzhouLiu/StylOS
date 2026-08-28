@@ -137,6 +137,7 @@ The complete codebase will be **fully released soon**. We appreciate your patien
 - [x] **Feb 2026** — Evaluation codes released
 - [x] **Feb 2026** — Comparison results released
 - [x] **Feb 2026** — Paper final version available
+- [x] **Aug 2026** — Added ICLR citation/reference
 ---
 
 ⭐ If you find this project useful, please **give us a star** to help more people discover it.  
