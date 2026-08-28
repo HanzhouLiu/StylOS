@@ -155,7 +155,9 @@ If you have any question, feel free to leave an issue or email Hanzhou Liu @ han
   pages={70768--70801},
   year={2026}
 }
+```
 
+```bibtex
 @article{liu2025stylos,
   title={Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting},
   author={Liu, Hanzhou and Huang, Jia and Lu, Mi and Saripalli, Srikanth and Jiang, Peng},
