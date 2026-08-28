@@ -147,6 +147,15 @@ If you have any question, feel free to leave an issue or email Hanzhou Liu @ han
 
 ## Citation
 ```bibtex
+@inproceedings{liu2026stylos,
+  title={Stylos: Multi-view 3d stylization with single-forward gaussian splatting},
+  author={Liu, Hanzhou and Huang, Jia and Lu, Mi and Saripalli, Srikanth and Jiang, Peng},
+  booktitle={International Conference on Learning Representations},
+  volume={2026},
+  pages={70768--70801},
+  year={2026}
+}
+
 @article{liu2025stylos,
   title={Stylos: Multi-View 3D Stylization with Single-Forward Gaussian Splatting},
   author={Liu, Hanzhou and Huang, Jia and Lu, Mi and Saripalli, Srikanth and Jiang, Peng},
